@@ -1,0 +1,16 @@
+{
+  "preset": "google",
+  "disallowSpacesInAnonymousFunctionExpression": null,
+  "validateLineBreaks": "LF",
+  "validateIndentation": 4,
+  "excludeFiles": ["./client.js", "./src/CometD/*.js", "node_modules/**"],
+  "jsDoc": {
+    "checkAnnotations": {
+      "preset": "jsdoc3",
+      "extra": {
+        "test": true
+      }
+    },
+    "checkTypes": "capitalizedNativeCase"
+  }
+}

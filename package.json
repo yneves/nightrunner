@@ -1,0 +1,19 @@
+{
+  "name": "nightrunner",
+  "version": "0.0.1",
+  "description": "Wrapper for Nightwatch.js",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yneves/nightrunner.git"
+  },
+  "author": "Yuri Neves Silveira <yurinevessilveira@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "freeport": "^1.0.5",
+    "express": "^4.13.3",
+    "nightwatch": "^0.9.5",
+    "phantomjs": "^1.9.17"
+  }
+}
