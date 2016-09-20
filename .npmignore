@@ -8,6 +8,7 @@
 .gitattributes
 .jscsrc
 .npmignore
-app.js
-index.html
-webpack.config.js
+node_modules
+npm-debug.log
+bin/chromedriver
+*.jar

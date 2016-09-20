@@ -2,7 +2,8 @@
   "preset": "google",
   "disallowSpacesInAnonymousFunctionExpression": null,
   "validateLineBreaks": "LF",
-  "validateIndentation": 4,
+  "validateIndentation": 2,
+  "maximumLineLength": 1000,
   "excludeFiles": ["./client.js", "./src/CometD/*.js", "node_modules/**"],
   "jsDoc": {
     "checkAnnotations": {
