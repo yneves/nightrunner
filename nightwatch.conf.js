@@ -2,11 +2,11 @@ const drivers = require('./lib/drivers.js');
 const temp = require('temp');
 const output = temp.mkdirSync('test-output');
 
-const env = (key) => {
+const env = (key, def) => {
   if (process.env[key]) {
     return process.env[key];
   } else {
-    return undefined;
+    return def;
   }
 };
 
@@ -14,8 +14,8 @@ module.exports = {
   'src_folders': env('NR_TESTS_PATH'),
   'globals_path': env('NR_GLOBALS_PATH'),
   'page_objects_path': env('NR_PAGES_PATH'),
-  'custom_commands_path': [__dirname + '/commands'].concat(env('NR_COMMANDS_PATH')),
-  'output_folder ': false,
+  'custom_commands_path': env('NR_COMMANDS_PATH'),
+  'output_folder': output,
   'selenium': {
     'start_process': true,
     'server_path': drivers.selenium.path,

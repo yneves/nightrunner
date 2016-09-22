@@ -4,7 +4,8 @@
   "description": "Wrapper for Nightwatch.js",
   "main": "index.js",
   "scripts": {
-    "install": "node ./bin/install.js"
+    "install": "node ./bin/install.js",
+    "nr": "node ./bin/nr.js --tests=./test/specs --browser=chrome"
   },
   "bin": {
     "nr": "./bin/nr.js"
@@ -16,6 +17,7 @@
   "author": "Yuri Neves Silveira <yurinevessilveira@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "auto-bind": "^0.1.0",
     "download": "^5.0.2",
     "express": "^4.13.3",
     "minimist": "^1.2.0",
