@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "install": "node ./bin/install.js",
-    "nr": "node ./bin/nr.js --tests=./test/specs --browser=chrome"
+    "test": "node ./bin/nr.js --tests=./test/specs",
+    "test:chrome": "node ./bin/nr.js --tests=./test/specs --browser=chrome"
   },
   "bin": {
     "nr": "./bin/nr.js"

@@ -40,9 +40,10 @@ module.exports = {
         'browserName': 'phantomjs',
         'javascriptEnabled': true,
         'acceptSslCerts': true,
-        'phantomjs.cli.args': ['--ignore-ssl-errors=true', '--local-storage-path=' + output],
         'phantomjs.page.settings.userAgent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36',
-        'phantomjs.binary.path': drivers.phantomjs.path
+        'phantomjs.binary.path': drivers.phantomjs.path,
+        'phantomjs.cli.args': ['--ignore-ssl-errors=true', '--local-storage-path=' + output, '--webdriver-loglevel=NONE'],
+        'phantomjs.ghostdriver.cli.args': ['--logLevel=NONE']
       }
     },
     'chrome': {
