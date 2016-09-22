@@ -3,14 +3,14 @@ const nr = require('../../');
 
 module.exports = {
 
-  before(done) {
-    this.server = nr.server()
+  before(browser, done) {
+    browser.server = nr.server()
       .static('/', path.resolve(__dirname, '../www'))
       .listen(4132, done);
   },
 
-  after() {
-    this.server.close();
+  after(browser) {
+    browser.server.close();
   },
 
   load(browser) {
