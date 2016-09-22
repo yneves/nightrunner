@@ -1,10 +1,9 @@
 {
   "name": "nightrunner",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Wrapper for Nightwatch.js",
   "main": "index.js",
   "scripts": {
-    "install": "node ./bin/install.js",
     "test": "node ./bin/nr.js --tests=./test/specs",
     "test:chrome": "node ./bin/nr.js --tests=./test/specs --browser=chrome"
   },
