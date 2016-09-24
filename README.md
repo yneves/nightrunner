@@ -36,7 +36,7 @@ module.exports = {
     browser.server.close();
   },
 
-  testCase(): {
+  testCase() {
     browser.url('http://localhost:8080').end();
   },
 
