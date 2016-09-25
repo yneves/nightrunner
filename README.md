@@ -1,12 +1,12 @@
 # nightrunner
 
+[![Build Status](https://travis-ci.org/yneves/nightrunner.svg?branch=master)](https://travis-ci.org/yneves/nightrunner)
+
 Wrapper for Nightwatch.js.
 
   * Automatically downloads all the necessary binaries (selenium, phantomjs, etc)
   * Provides easy API to mock http server (expressjs with a few extensions).
   * Config-less CLI tool.
-
-[![Build Status](https://travis-ci.org/yneves/nightrunner.svg?branch=master)](https://travis-ci.org/yneves/nightrunner)
 
 ## Install
 
