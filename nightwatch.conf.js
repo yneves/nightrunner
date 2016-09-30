@@ -15,6 +15,7 @@ module.exports = {
   'globals_path': env('NR_GLOBALS_PATH'),
   'page_objects_path': env('NR_PAGES_PATH'),
   'custom_commands_path': env('NR_COMMANDS_PATH'),
+  'custom_assertions_path': env('NR_ASSERTIONS_PATH'),
   'output_folder': output,
   'selenium': {
     'start_process': true,
@@ -23,6 +24,7 @@ module.exports = {
     'host': '127.0.0.1',
     'port': 4444,
     'cli_args': {
+      'webdriver.ie.driver': drivers.ie.path,
       'webdriver.chrome.driver': drivers.chrome.path,
       'java.security.egd': 'file:///dev/urandom switch'
     }
@@ -47,6 +49,13 @@ module.exports = {
       }
     },
     'chrome': {
+      'desiredCapabilities': {
+        'browserName': 'chrome',
+        'javascriptEnabled': true,
+        'acceptSslCerts': true
+      }
+    },
+    'ie': {
       'desiredCapabilities': {
         'browserName': 'chrome',
         'javascriptEnabled': true,
