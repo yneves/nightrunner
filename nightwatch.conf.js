@@ -16,7 +16,7 @@ module.exports = {
   'page_objects_path': env('NR_PAGES_PATH'),
   'custom_commands_path': env('NR_COMMANDS_PATH'),
   'custom_assertions_path': env('NR_ASSERTIONS_PATH'),
-  'output_folder': output,
+  'output_folder': env('NR_OUTPUT_PATH', output),
   'selenium': {
     'start_process': true,
     'server_path': drivers.selenium.path,
