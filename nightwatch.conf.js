@@ -57,7 +57,7 @@ module.exports = {
     },
     'ie': {
       'desiredCapabilities': {
-        'browserName': 'chrome',
+        'browserName': 'ie',
         'javascriptEnabled': true,
         'acceptSslCerts': true
       }
