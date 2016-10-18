@@ -4,6 +4,7 @@
   "description": "Wrapper for Nightwatch.js",
   "main": "index.js",
   "scripts": {
+    "nr": "./bin/nr.js",
     "test": "eslint . && npm run test:phantomjs",
     "test:phantomjs": "node ./bin/nr.js --tests=./test/specs",
     "test:chrome": "node ./bin/nr.js --tests=./test/specs --browser=chrome"
