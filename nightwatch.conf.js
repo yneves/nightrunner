@@ -24,6 +24,7 @@ module.exports = {
     host: '127.0.0.1',
     port: 4444,
     cli_args: {
+      'webdriver.gecko.driver': drivers.firefox.path,
       'webdriver.ie.driver': drivers.ie.path,
       'webdriver.chrome.driver': drivers.chrome.path,
       'java.security.egd': 'file:///dev/urandom switch'
@@ -61,6 +62,13 @@ module.exports = {
             traceCategories: 'toplevel,disabled-by-default-devtools.timeline.frame,blink.console,disabled-by-default-devtools.timeline,benchmark'
           }
         }
+      }
+    },
+    firefox: {
+      desiredCapabilities: {
+        browserName: 'firefox',
+        javascriptEnabled: true,
+        acceptSslCerts: true
       }
     },
     ie: {
