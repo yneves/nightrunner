@@ -57,7 +57,7 @@ module.exports = {
         browserName: 'chrome',
         loggingPrefs: { performance: 'ALL' },
         chromeOptions: {
-          args: ['--enable-gpu-benchmarking', '--enable-thread-composting'],
+          args: ['--enable-gpu-benchmarking', '--enable-thread-composting', '--disable-notifications'],
           perfLoggingPrefs: {
             traceCategories: 'toplevel,disabled-by-default-devtools.timeline.frame,blink.console,disabled-by-default-devtools.timeline,benchmark'
           }
