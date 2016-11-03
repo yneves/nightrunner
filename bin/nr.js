@@ -7,13 +7,17 @@ const opts = {
     'tests',
     'globals',
     'commands',
+    'assertions',
     'pages',
     'browser',
     'test',
-    'case'
+    'case',
+    'screenshots',
+    'output'
   ],
   boolean: [
-    'download'
+    'download',
+    'verbose'
   ]
 };
 const args = parseArgs(process.argv.slice(2), opts);

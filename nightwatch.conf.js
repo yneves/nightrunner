@@ -36,8 +36,8 @@ module.exports = {
       selenium_host: 'localhost',
       silent: true,
       screenshots: {
-        enabled: false,
-        path: output
+        enabled: !!env('NR_SCREENSHOTS_PATH', false),
+        path: env('NR_SCREENSHOTS_PATH', output)
       },
       desiredCapabilities: {
         browserName: 'phantomjs',
