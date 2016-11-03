@@ -20,7 +20,7 @@
   "license": "MIT",
   "dependencies": {
     "download": "^5.0.2",
-    "eslint": "^3.6.0",
+    "eslint": "^3.9.1",
     "express": "^4.13.3",
     "home-dir": "^1.0.0",
     "loading-spinner": "^1.1.3",
