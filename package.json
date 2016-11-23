@@ -4,11 +4,11 @@
   "description": "Wrapper for Nightwatch.js",
   "main": "index.js",
   "scripts": {
-    "nr": "./bin/nr.js --tests=./test/specs",
-    "test": "eslint . && npm run test:phantomjs",
-    "test:phantomjs": "npm run nr",
-    "test:firefox": "npm run nr -- --browser=firefox",
-    "test:chrome": "npm run nr -- --browser=chrome"
+    "nr": "./bin/nr.js --tests=test --test=test/setup.js",
+    "test": "eslint .",
+    "nr:chrome": "npm run nr -- --browser=chrome",
+    "nr:firefox": "npm run nr -- --browser=firefox",
+    "server": "node server/server.js"
   },
   "bin": {
     "nr": "./bin/nr.js"
@@ -20,13 +20,18 @@
   "author": "Yuri Neves Silveira <yurinevessilveira@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "auto-bind": "^0.1.0",
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
     "download": "^5.0.2",
     "eslint": "^3.9.1",
     "express": "^4.13.3",
+    "helmet": "^3.1.0",
     "home-dir": "^1.0.0",
     "loading-spinner": "^1.1.3",
     "minimist": "^1.2.0",
     "nightwatch": "^0.9.5",
-    "temp": "^0.8.3"
+    "temp": "^0.8.3",
+    "websocket": "^1.0.23"
   }
 }
