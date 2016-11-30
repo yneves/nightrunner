@@ -5,6 +5,7 @@ const createServer = require('../server/server.js');
 module.exports = nr.setup({
 
   include: path.resolve(__dirname, 'specs/*.js'),
+  reuseBrowser: true,
 
   before(client, done) {
     this.server = createServer(done);
@@ -18,8 +19,7 @@ module.exports = nr.setup({
     this.client
       .resizeWindow(1400, 900)
       .url(this.server.urls.http)
-      .perform(() => testCase.call(this, this.client))
-      .end();
+      .perform(() => testCase.call(this, this.client));
   }
 
 });
