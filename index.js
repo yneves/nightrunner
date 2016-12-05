@@ -1,5 +1,8 @@
-const run = require('./lib/run.js');
-const server = require('./lib/server.js');
-const driver = require('./lib/driver.js');
-const setup = require('./lib/setup.js');
-module.exports = {run, server, setup, driver};
+'use strict';
+
+module.exports = {
+  run: require('./lib/run.js'),
+  server: require('./lib/server.js'),
+  setup: require('./lib/setup.js'),
+  driver: require('./lib/driver.js')
+};
