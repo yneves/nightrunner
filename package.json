@@ -26,6 +26,7 @@
     "download": "^5.0.2",
     "eslint": "^3.11.1",
     "express": "^4.13.3",
+    "glob": "^7.1.1",
     "helmet": "^3.1.0",
     "home-dir": "^1.0.0",
     "loading-spinner": "^1.1.3",
