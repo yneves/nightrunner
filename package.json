@@ -8,7 +8,9 @@
     "test": "eslint .",
     "nr:chrome": "npm run nr -- --browser=chrome",
     "nr:firefox": "npm run nr -- --browser=firefox",
-    "server": "node server/server.js"
+    "server": "node server/server.js",
+    "lint": "eslint -c .eslintrc lib",
+    "lint:fix": "yarn run lint -- --fix"
   },
   "bin": {
     "nr": "./bin/nr.js"
@@ -24,7 +26,6 @@
     "body-parser": "^1.15.2",
     "cors": "^2.8.1",
     "download": "^5.0.2",
-    "eslint": "^3.11.1",
     "express": "^4.13.3",
     "glob": "^7.1.1",
     "helmet": "^3.1.0",
@@ -34,5 +35,9 @@
     "nightwatch": "^0.9.9",
     "temp": "^0.8.3",
     "websocket": "^1.0.23"
+  },
+  "devDependencies": {
+    "eslint": "^3.7.1",
+    "eslint-config-google": "^0.7.1"
   }
 }

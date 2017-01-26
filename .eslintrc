@@ -1,13 +1,13 @@
 {
+  "extends": "google",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
   "env": {
-    "es6": true
+    "node": true
   },
   "rules": {
-    // Strict mode
-    "strict": [2, "never"],
-
-    // Code style
-    "indent": [2, 2, { "SwitchCase": 1 }],
-    "quotes": [2, "single"]
+    "require-jsdoc": 0
   }
 }

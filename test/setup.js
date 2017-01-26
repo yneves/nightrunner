@@ -15,12 +15,12 @@ module.exports = nr.setup({
     this.server.close();
   },
 
-  wrapEach(testCase,next) {
+  wrapEach(testCase, next) {
     this.client
       .resizeWindow(1400, 900)
       .url(this.server.urls.http)
       .perform(() => testCase.call(this, this.client))
       .perform(() => next());
-  }
+  },
 
 });
