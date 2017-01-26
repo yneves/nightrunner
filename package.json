@@ -1,6 +1,6 @@
 {
   "name": "nightrunner",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "description": "Wrapper for Nightwatch.js",
   "main": "index.js",
   "scripts": {
