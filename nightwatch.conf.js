@@ -1,14 +1,26 @@
 const drivers = require('./lib/drivers.js');
 const temp = require('temp');
+
 const output = temp.mkdirSync('test-output');
 const env = (key, def) => (process.env[key] || def);
+const resolve = (key) => {
+  let val = env(key);
+  if (!val) {
+    return undefined;
+  }
+  val = val.split(';');
+  if (val.length < 2) {
+    return val[0];
+  }
+  return val;
+};
 
 module.exports = {
-  src_folders: env('NR_TESTS_PATH'),
-  globals_path: env('NR_GLOBALS_PATH'),
-  page_objects_path: env('NR_PAGES_PATH'),
-  custom_commands_path: env('NR_COMMANDS_PATH'),
-  custom_assertions_path: env('NR_ASSERTIONS_PATH'),
+  src_folders: resolve('NR_TESTS_PATH'),
+  globals_path: resolve('NR_GLOBALS_PATH'),
+  page_objects_path: resolve('NR_PAGES_PATH'),
+  custom_commands_path: resolve('NR_COMMANDS_PATH'),
+  custom_assertions_path: resolve('NR_ASSERTIONS_PATH'),
   output_folder: env('NR_OUTPUT_PATH', output),
   selenium: {
     start_process: true,

@@ -1,10 +1,10 @@
 {
   "name": "nightrunner",
-  "version": "0.1.18",
+  "version": "0.1.19",
   "description": "Wrapper for Nightwatch.js",
   "main": "index.js",
   "scripts": {
-    "nr": "./bin/nr.js --tests=test --test=test/setup.js",
+    "nr": "./bin/nr.js --browser=chrome --tests=test --test=test/setup.js",
     "test": "eslint .",
     "nr:chrome": "npm run nr -- --browser=chrome",
     "nr:firefox": "npm run nr -- --browser=firefox",
