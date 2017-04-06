@@ -7,20 +7,15 @@ module.exports = nr.setup({
   include: path.resolve(__dirname, 'specs/*.js'),
   reuseBrowser: true,
 
-  before(client, done) {
-    this.server = createServer(done);
-  },
-
-  after(client) {
-    this.server.close();
-  },
-
   wrapEach(testCase, next) {
-    this.client
-      .resizeWindow(1400, 900)
-      .url(this.server.urls.http)
-      .perform(() => testCase.call(this, this.client))
-      .perform(() => next());
+    createServer(0, (server) => {
+      this.client
+        .resizeWindow(1400, 900)
+        .url(server.urls.http)
+        .perform(() => testCase.call(this, this.client))
+        .perform(() => server.close())
+        .perform(() => next());
+    });
   },
 
 });

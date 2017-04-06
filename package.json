@@ -1,13 +1,11 @@
 {
   "name": "nightrunner",
-  "version": "0.1.19",
+  "version": "0.1.20",
   "description": "Wrapper for Nightwatch.js",
   "main": "index.js",
   "scripts": {
     "nr": "./bin/nr.js --browser=chrome --tests=test --test=test/setup.js",
     "test": "eslint .",
-    "nr:chrome": "npm run nr -- --browser=chrome",
-    "nr:firefox": "npm run nr -- --browser=firefox",
     "server": "node server/server.js",
     "lint": "eslint -c .eslintrc lib",
     "lint:fix": "yarn run lint -- --fix"
@@ -22,7 +20,7 @@
   "author": "Yuri Neves Silveira <yurinevessilveira@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "auto-bind": "^0.1.0",
+    "auto-bind": "^1.1.0",
     "body-parser": "^1.15.2",
     "cors": "^2.8.1",
     "download": "^5.0.2",
