@@ -6,5 +6,5 @@ module.exports = {
   key: fs.readFileSync(path.resolve(__dirname, './server.key')),
   cert: fs.readFileSync(path.resolve(__dirname, './server.crt')),
   requestCert: true,
-  rejectUnauthorized: false
+  rejectUnauthorized: false,
 };

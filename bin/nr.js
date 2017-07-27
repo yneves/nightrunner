@@ -13,12 +13,13 @@ const opts = {
     'test',
     'case',
     'screenshots',
-    'output'
+    'output',
   ],
   boolean: [
     'download',
-    'verbose'
-  ]
+    'verbose',
+    'repeat',
+  ],
 };
 const args = parseArgs(process.argv.slice(2), opts);
 run(args);

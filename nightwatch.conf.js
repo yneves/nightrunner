@@ -68,11 +68,20 @@ module.exports = {
         javascriptEnabled: true,
         acceptSslCerts: true,
         browserName: 'chrome',
-        loggingPrefs: {performance: 'ALL'},
+        loggingPrefs: {
+            'browser': 'ALL',
+            'driver': 'ALL',
+            'performance': 'ALL',
+        },
         chromeOptions: {
-          args: ['--enable-gpu-benchmarking', '--enable-thread-composting', '--disable-notifications'],
+          args: [
+            '--enable-gpu-benchmarking',
+            '--enable-thread-composting',
+            '--disable-notifications',
+          ],
           perfLoggingPrefs: {
             traceCategories: [
+              'v8',
               'toplevel',
               'disabled-by-default-devtools.timeline.frame',
               'blink.console',
