@@ -2,7 +2,7 @@ const path = require('path');
 const nr = require('../');
 const driver = require('./driver.js');
 
-module.exports = function createServer(port, done) {
+function createServer(port, done) {
   const server = nr.server();
   server.listenHttp(port, () => {
     server.listenWebsocket({autoAcceptConnections: true});
@@ -13,6 +13,8 @@ module.exports = function createServer(port, done) {
   });
   return server;
 };
+
+module.exports = createServer;
 
 if (require.main === module) {
   createServer(7555, (server) => {

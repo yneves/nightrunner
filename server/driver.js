@@ -8,7 +8,7 @@ module.exports = nr.driver({
 
   onWebsocketConnection(connection) {
     connection.on('message', (message) => {
-      connection.send(message)
+      connection.send(message);
     });
-  }
+  },
 });

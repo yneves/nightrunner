@@ -1,9 +1,9 @@
 function post(content, callback) {
-  var xmlhttp = new XMLHttpRequest();
+  let xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
     if (xmlhttp.readyState === 4) {
       try {
-        var data = JSON.parse(xmlhttp.responseText);
+        let data = JSON.parse(xmlhttp.responseText);
         callback(null, data);
       } catch (e) {
         callback(e);
@@ -15,8 +15,8 @@ function post(content, callback) {
   xmlhttp.send(JSON.stringify(content));
 }
 
-post({ a: 1, b: 2, c: 3}, function(error, data) {
-  var div = document.createElement('div');
+post({a: 1, b: 2, c: 3}, function(error, data) {
+  let div = document.createElement('div');
   div.id = 'http';
   div.textContent = JSON.stringify(data);
   document.body.appendChild(div);
